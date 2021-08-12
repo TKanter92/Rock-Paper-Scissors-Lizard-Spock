@@ -13,4 +13,4 @@ class Player():
 
 # Methods
     def choose_gesture(self):
-        self.gesture = ""
+        pass

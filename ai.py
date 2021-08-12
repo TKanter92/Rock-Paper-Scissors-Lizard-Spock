@@ -10,3 +10,6 @@ class AI():
         pass
 
 # Methods
+# can randomly select an index that corresponds to the appropriate gesture
+    def choose_gesture(self):
+        pass
