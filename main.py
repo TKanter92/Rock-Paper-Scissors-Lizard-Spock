@@ -7,7 +7,6 @@ from game import Game
 # Properties
 
 test_run = Game()
+# Methods
 
 test_run.run_game()
-
-# Methods

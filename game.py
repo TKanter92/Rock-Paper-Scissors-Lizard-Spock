@@ -10,9 +10,8 @@ class Game:
 
 # Properties
     def __init__(self):
-        self.player_one = Human()
-        self.player_two = Human()
-        self.computer_player = AI()
+        self.player_one =None
+        self.player_two = None
 
 
 # Methods
@@ -20,6 +19,7 @@ class Game:
         self.welcome_message()
         self.rules()
         self.setup_players()
+        self.single_player()
 
     def welcome_message(self):
         print("Welcome to Rock, Paper, Scissors, Lizard, Spock!")
@@ -30,28 +30,42 @@ class Game:
     def setup_players(self):
         number_of_players = input("How many players?")
         if (int(number_of_players)) == 1:
-            self.single_player()
+            self.player_one = Human(1)
+            self.player_two = AI()
+        if (int(number_of_players)) > 2:
+            print("Not a valid number of players. Please re-enter number of players.")
+            self.setup_players()
         else:
-            self.multi_player()
+            self.player_one = Human(1)
+            self.player_two = Human(2)
 
     def single_player(self):
-        self.player_one.identify_player_details()
-        print(f'Hello {self.player_one.name}!')
+        
+        
         self.player_one.choose_gesture()
+        print(f"Thanks {self.player_one}!")
+        self.player_two.choose_gesture()
+        print(f"Thanks {self.player_two}!")
+        print(f'{self.player_one.chosen_gesture} has chosen {self.player_one.chosen_gesture}')
         self.computer_player.random_gesture()
-        print(f'{self.player_one} has chosen {self.player_one.choose_gesture}')
         print(f'{self.computer_player} has chosen {self.computer_player.random_gesture}')
+        # function that identifies a winner based on the outline provided (about which gesture beats what) in user stories should be placed here
+        # some sort of display or print should then be placed here, to identify the winner of the round
+        # function to increase the count for winner should be placed here
+        # If the score has not reached 2 for any player, another round should start. If 2 wins have taken place, the round should be over and announced here. (LOOP?)
 
     
         
 
-    def multi_player(self):
+
+
+    def scoring(self):
+        # identify what beats what and then display winner
         pass
 
 
 
-    def game_rounds(self):
-        Human.choose_gesture()
+   
     
 
 

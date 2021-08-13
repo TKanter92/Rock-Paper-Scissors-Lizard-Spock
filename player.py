@@ -11,4 +11,7 @@ class Player():
         self.score = 0
         self.gesture_list = ["rock", "paper", "scissors", "lizard", "spock"]
 
+    def __str__(self):
+        return self.name
+
 # Methods

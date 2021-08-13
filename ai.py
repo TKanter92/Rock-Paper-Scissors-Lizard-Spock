@@ -8,13 +8,15 @@ class AI(Player):
 # Properties
 
     def __init__(self):
+        self.name = "Computer"
         super().__init__()
         
 
 # Methods
 
-    def random_gesture(self):
+    def choose_gesture(self):
         chosen_gesture = print(random.choice(self.gesture_list))
         return chosen_gesture
         
-
+    def __str__(self):
+        return self.name
