@@ -28,14 +28,13 @@ class Game:
         print("Each player will select their gesture in hopes of beating their opponent. Each game will consist of up to 3 rounds, with a winner being declared after having won two of the three rounds.")
 
     def setup_players(self):
-        number_of_players = input("How many players?")
+        number_of_players = input("Please enter the number of players")
         if (int(number_of_players)) == 1:
             self.player_one = Human(1)
             self.player_two = AI()
         if (int(number_of_players)) > 2:
             print("Not a valid number of players. Please re-enter number of players.")
             self.setup_players()
-            # Maybe at some point we could add in computer vs. computer as an option of "0" players? 
         else:
             self.player_one = Human(1)
             self.player_two = Human(2)
@@ -157,17 +156,13 @@ class Game:
                 print(f"It's a draw! Play again!")
                 self.game_rounds()
 
-
-        # function that identifies a winner based on the outline provided (about which gesture beats what) in user stories should be placed here
-        # some sort of display or print should then be placed here, to identify the winner of the round
-        # function to increase the count for winner should be placed here
-        # If the score has not reached 2 for any player, another round should start. If 2 wins have taken place, the round should be over and announced here. (LOOP?)
-
-
     def display_winner(self):
         if self.player_one.score == 2 or self.player_two.score == 2:
             print(f"Congratulations, {self.player_one or self.player_two}! You have won the game!")
             print("Game Over")
+            
+
+
 
    
     
