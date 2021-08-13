@@ -48,7 +48,6 @@ class Game:
             print(f"Thanks {self.player_two}!")
             print("Let's begin!")
             self.game_logic()
-            self.game_rounds()
         else:
             self.display_winner()
 
@@ -119,15 +118,24 @@ class Game:
                 self.game_rounds()
         while self.player_one.chosen_gesture == "Lizard":
             if self.player_two.chosen_gesture == "Rock":
-                print(f'')
+                print(f'{self.player_two} wins!')
+                self.player_two.score + 1
+                self.game_rounds()
             elif self.player_two.chosen_gesture == "Paper":
-                print(f'')
+                print(f'{self.player_one} wins!')
+                self.player_one.score + 1
+                self.game_rounds()
             elif self.player_two.chosen_gesture == "Scissors":
-                print(f'')
+                print(f'{self.player_two} wins!')
+                self.player_two.score + 1
+                self.game_rounds()
             elif self.player_two.chosen_gesture == "Lizard":
                 print(f"It's a draw! Play again!")
+                self.game_rounds()
             elif self.player_two.chosen_gesture == "Spock":
-                print(f'')
+                print(f'{self.player_one} wins!')
+                self.player_one.score + 1
+                self.game_rounds()
         while self.player_one.chosen_gesture == "Spock":
             if self.player_two.chosen_gesture == "Rock":
                 print(f'')
