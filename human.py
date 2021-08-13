@@ -11,23 +11,20 @@ class Human(Player):
         super().__init__()
         self.identify_player_details(player_number)
 
-
 # Methods
 
     def choose_gesture(self):
         print("Please choose your gesture")
-        index = 0
+        index = 1
         for element in self.gesture_list:
             print(f'Type {index} for {element}')
             index += 1
         user_input = input()
-        self.chosen_gesture = self.gesture_list[user_input]
+        self.chosen_gesture = self.gesture_list[int(user_input)]
 
     def identify_player_details(self, player_number):
         self.name = input(f'What is the name for player number {player_number}?')
         print(f'Hello {self.name}!')
-
-   
 
     def __str__(self):
         return self.name

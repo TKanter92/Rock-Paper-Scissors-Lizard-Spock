@@ -2,20 +2,22 @@
 # AUTHOR: Tyler Kanter & Cody Orr
 # Create Date: August 12th, 2021
 import random
-from player import Player
-class AI(Player):
+
+class AI():
 
 # Properties
 
     def __init__(self):
         self.name = "Computer"
-        super().__init__()
+        self.chosen_gesture = ''
+        self.score = 0
+        self.gesture_list = ["rock", "paper", "scissors", "lizard", "spock"]
         
 
 # Methods
 
     def choose_gesture(self):
-        chosen_gesture = print(random.choice(self.gesture_list))
+        chosen_gesture = random.choice(self.gesture_list)
         return chosen_gesture
         
     def __str__(self):

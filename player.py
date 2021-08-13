@@ -6,7 +6,7 @@ class Player():
 
 # Properties
     def __init__(self):
-        self.name = ""
+        self.name = None
         self.chosen_gesture = ""
         self.score = 0
         self.gesture_list = ["rock", "paper", "scissors", "lizard", "spock"]
@@ -15,3 +15,5 @@ class Player():
         return self.name
 
 # Methods
+
+
