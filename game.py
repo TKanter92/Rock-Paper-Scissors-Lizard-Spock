@@ -99,16 +99,24 @@ class Game:
                 self.game_rounds()
         while self.player_one.chosen_gesture == "Scissors":
             if self.player_two.chosen_gesture == "Rock":
-                print(f'')
+                print(f'{self.player_two} has won!')
+                self.player_two.score + 1
+                self.game_rounds()
             elif self.player_two.chosen_gesture == "Paper":
-                print(f'')
+                print(f'{self.player_one} has won!')
+                self.player_one.score + 1
+                self.game_rounds()
             elif self.player_two.chosen_gesture == "Scissors":
                 print(f"It's a draw! Play again!")
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "Lizard":
-                print(f'')
+                print(f'{self.player_two} has won!')
+                self.player_two.score + 1
+                self.game_rounds()
             elif self.player_two.chosen_gesture == "Spock":
-                print(f'')
+                print(f'{self.player_two} has won!')
+                self.player_two.score + 1
+                self.game_rounds()
         while self.player_one.chosen_gesture == "Lizard":
             if self.player_two.chosen_gesture == "Rock":
                 print(f'')
