@@ -11,7 +11,8 @@ class Game:
 # Properties
     def __init__(self):
         self.player_one = Human()
-        self.player_two = None
+        self.player_two = Human()
+        self.computer_player = AI()
 
 
 # Methods
@@ -27,14 +28,21 @@ class Game:
         print("Each player will select their gesture in hopes of beating their opponent. Each game will consist of up to 3 rounds, with a winner being declared after having won two of the three rounds.")
 
     def setup_players(self):
-        input("How many players?")
-        if (int(input)) == 1:
+        number_of_players = input("How many players?")
+        if (int(number_of_players)) == 1:
             self.single_player()
         else:
             self.multi_player()
 
     def single_player(self):
-        self.identify_player_details()
+        self.player_one.identify_player_details()
+        print(f'Hello {self.player_one.name}!')
+        self.player_one.choose_gesture()
+        self.computer_player.random_gesture()
+        print(f'{self.player_one} has chosen {self.player_one.choose_gesture}')
+        print(f'{self.computer_player} has chosen {self.computer_player.random_gesture}')
+
+    
         
 
     def multi_player(self):
@@ -42,7 +50,8 @@ class Game:
 
 
 
-
+    def game_rounds(self):
+        Human.choose_gesture()
     
 
 

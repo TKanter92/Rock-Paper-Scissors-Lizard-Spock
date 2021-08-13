@@ -12,5 +12,3 @@ class Player():
         self.gesture_list = ["rock", "paper", "scissors", "lizard", "spock"]
 
 # Methods
-    def choose_gesture(self):
-        pass
