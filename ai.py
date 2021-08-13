@@ -17,8 +17,7 @@ class AI():
 # Methods
 
     def choose_gesture(self):
-        chosen_gesture = random.choice(self.gesture_list)
-        return chosen_gesture
+        self.chosen_gesture = random.choice(self.gesture_list)
         
     def __str__(self):
         return self.name

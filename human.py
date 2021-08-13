@@ -15,7 +15,7 @@ class Human(Player):
 
     def choose_gesture(self):
         print("Please choose your gesture")
-        index = 1
+        index = 0
         for element in self.gesture_list:
             print(f'Type {index} for {element}')
             index += 1

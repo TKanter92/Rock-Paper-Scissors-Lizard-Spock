@@ -60,105 +60,107 @@ class Game():
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "paper":
                 print(f'{self.player_two} wins!')
-                self.player_two.score + 1
+                self.player_two.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "scissors":
                 print(f'{self.player_one} wins!')
-                self.player_one.score + 1
+                self.player_one.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "lizard":
                 print(f'{self.player_one} wins!')
-                self.player_one.score + 1
+                self.player_one.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "spock":
                 print(f'{self.player_two} wins!')
-                self.player_two.score + 1
+                self.player_two.score += 1
                 self.game_rounds()
         if self.player_one.chosen_gesture == "paper":
             if self.player_two.chosen_gesture == "rock":
                 print(f'{self.player_one} wins!')
-                self.player_one.score + 1
+                self.player_one.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "paper":
                 print(f"It's a draw! Play again!")
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "scissors":
                 print(f'{self.player_two} has won!')
-                self.player_two.score + 1
+                self.player_two.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "lizard":
                 print(f'{self.player_two} has won!')
-                self.player_two.score + 1
+                self.player_two.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "spock":
                 print(f'{self.player_one} has won!')
-                self.player_one.score + 1
+                self.player_one.score += 1
                 self.game_rounds()
         if self.player_one.chosen_gesture == "scissors":
             if self.player_two.chosen_gesture == "rock":
                 print(f'{self.player_two} has won!')
-                self.player_two.score + 1
+                self.player_two.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "paper":
                 print(f'{self.player_one} has won!')
-                self.player_one.score + 1
+                self.player_one.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "scissors":
                 print(f"It's a draw! Play again!")
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "lizard":
-                print(f'{self.player_two} has won!')
-                self.player_two.score + 1
+                print(f'{self.player_one} has won!')
+                self.player_one.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "spock":
                 print(f'{self.player_two} has won!')
-                self.player_two.score + 1
+                self.player_two.score += 1
                 self.game_rounds()
         if self.player_one.chosen_gesture == "lizard":
             if self.player_two.chosen_gesture == "rock":
                 print(f'{self.player_two} wins!')
-                self.player_two.score + 1
+                self.player_two.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "paper":
                 print(f'{self.player_one} wins!')
-                self.player_one.score + 1
+                self.player_one.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "scissors":
                 print(f'{self.player_two} wins!')
-                self.player_two.score + 1
+                self.player_two.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "lizard":
                 print(f"It's a draw! Play again!")
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "spock":
                 print(f'{self.player_one} wins!')
-                self.player_one.score + 1
+                self.player_one.score += 1
                 self.game_rounds()
         if self.player_one.chosen_gesture == "spock":
             if self.player_two.chosen_gesture == "rock":
                 print(f'{self.player_one} wins!')
-                self.player_one.score + 1
+                self.player_one.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "paper":
                 print(f'{self.player_two} wins!')
-                self.player_two.score + 1
+                self.player_two.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "scissors":
                 print(f'{self.player_one} wins!')
-                self.player_one.score + 1
+                self.player_one.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "lizard":
                 print(f'{self.player_two} wins!')
-                self.player_two.score + 1
+                self.player_two.score += 1
                 self.game_rounds()
             elif self.player_two.chosen_gesture == "spock":
                 print(f"It's a draw! Play again!")
                 self.game_rounds()
 
     def display_winner(self):
-        if self.player_one.score == 2 or self.player_two.score == 2:
-            print(f"Congratulations, {self.player_one or self.player_two}! You have won the game!")
-            print("Game Over")
+        if self.player_one.score == 2:
+            print(f"Congratulations, {self.player_one}! You have won the game!")
+        else:
+            print(f"Congratulations {self.player_two}! You have won the game!")
+        print("Game Over")
             
 
 
