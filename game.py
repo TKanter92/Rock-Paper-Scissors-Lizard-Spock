@@ -138,15 +138,24 @@ class Game:
                 self.game_rounds()
         while self.player_one.chosen_gesture == "Spock":
             if self.player_two.chosen_gesture == "Rock":
-                print(f'')
+                print(f'{self.player_one} wins!')
+                self.player_one.score + 1
+                self.game_rounds()
             elif self.player_two.chosen_gesture == "Paper":
-                print(f'')
+                print(f'{self.player_two} wins!')
+                self.player_two.score + 1
+                self.game_rounds()
             elif self.player_two.chosen_gesture == "Scissors":
-                print(f'')
+                print(f'{self.player_one} wins!')
+                self.player_one.score + 1
+                self.game_rounds()
             elif self.player_two.chosen_gesture == "Lizard":
-                print(f'')
+                print(f'{self.player_two} wins!')
+                self.player_two.score + 1
+                self.game_rounds()
             elif self.player_two.chosen_gesture == "Spock":
                 print(f"It's a draw! Play again!")
+                self.game_rounds()
 
 
         # function that identifies a winner based on the outline provided (about which gesture beats what) in user stories should be placed here
