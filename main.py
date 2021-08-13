@@ -6,7 +6,7 @@ from game import Game
 
 # Properties
 
-test_run = Game()
+Battle_Royale = Game()
 # Methods
 
-test_run.run_game()
+Battle_Royale.run_game()
