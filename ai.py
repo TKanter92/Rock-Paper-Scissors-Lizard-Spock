@@ -9,7 +9,7 @@ class AI():
 
     def __init__(self):
         self.name = "Computer"
-        self.chosen_gesture = ''
+        self.chosen_gesture = ""
         self.score = 0
         self.gesture_list = ["rock", "paper", "scissors", "lizard", "spock"]
         

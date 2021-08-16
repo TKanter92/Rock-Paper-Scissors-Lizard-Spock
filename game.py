@@ -40,7 +40,7 @@ class Game():
             self.setup_players()
 
     def game_rounds(self):
-        while self.player_one.score < 2 and self.player_two.score < 2:
+        if (self.player_one.score < 2) and (self.player_two.score < 2):
             self.player_one.choose_gesture()
             print(f"Thanks {self.player_one}!")
             self.player_two.choose_gesture()
@@ -161,8 +161,18 @@ class Game():
         else:
             print(f"Congratulations {self.player_two}! You have won the game!")
         print("Game Over")
+        self.play_again()
             
-
+    def play_again(self):
+        print("Would you like to play again? Type 'yes' or 'no'")
+        user_input = input()
+        if user_input == "yes":
+            self.run_game()
+        if user_input == "no":
+            print("Thank you for playing. Come back soon.")
+        else:
+            print("Not a valid option, please try again.")
+            self.play_again()
 
 
    

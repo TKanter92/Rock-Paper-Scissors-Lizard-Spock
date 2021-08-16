@@ -14,12 +14,16 @@ class Human(Player):
 # Methods
 
     def choose_gesture(self):
-        print("Please choose your gesture")
+        print(f'{self.name}, please choose your gesture')
         index = 0
         for element in self.gesture_list:
             print(f'Type {index} for {element}')
             index += 1
         user_input = input()
+        if (int(user_input)) > 4:
+            print("Invalid gesture, please re-select gesture.")
+            self.choose_gesture()
+
         self.chosen_gesture = self.gesture_list[int(user_input)]
 
     def identify_player_details(self, player_number):
